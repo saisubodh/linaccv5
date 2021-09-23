@@ -28,7 +28,7 @@ namespace hackathon.Controllers
     public class MetadataController : ControllerBase
     {
         [HttpGet]
-        public IActionResult get(string repoOrg, string repoName)
+        public IActionResult get(string repoOrg=".", string repoName=".")
         {
             string path = String.Concat("./project/", String.Concat(repoOrg,String.Concat("/",repoName)));
             if (!Directory.Exists(path))
@@ -36,7 +36,9 @@ namespace hackathon.Controllers
                 Directory.CreateDirectory("path");
                 string repo = String.Concat("https://github.com/", String.Concat(repoOrg, String.Concat("/", repoName)));
                 repo = String.Concat(repo, ".git");
-                object p = LibGit2Sharp.Repository.Clone(repo, path);
+                try { 
+                    object p = LibGit2Sharp.Repository.Clone(repo, path); }
+                catch{}
 
             }
             //string json= "";
@@ -48,8 +50,13 @@ namespace hackathon.Controllers
             }
             */
             string filePath = String.Concat(path, "/metadata.json");
-            string json = System.IO.File.ReadAllText(filePath);
-            JsonConvert.DeserializeObject<MetadataModel>(json);
+            string json = "file not found..";
+            try { 
+                json = System.IO.File.ReadAllText(filePath);
+                JsonConvert.DeserializeObject<MetadataModel>(json);
+            }
+            catch { }
+            
             return Ok(json);
         }
     }
