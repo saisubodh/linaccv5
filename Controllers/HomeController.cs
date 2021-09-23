@@ -41,14 +41,6 @@ namespace hackathon.Controllers
                 catch{}
 
             }
-            //string json= "";
-            //if (!Directory.Exists(path))
-            //    return Ok("could not find file");
-            /*using (StreamReader r = new StreamReader(@"../../project/metadata.json"))
-            {
-                json = r.ReadToEnd();
-            }
-            */
             string filePath = String.Concat(path, "/metadata.json");
             string json = "file not found..";
             try { 
