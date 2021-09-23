@@ -28,7 +28,6 @@ namespace hackathon
             services
                 .AddRouting(options => options.LowercaseUrls = true);
             services.AddMvc(options => options.EnableEndpointRouting = false);
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
         }
 
