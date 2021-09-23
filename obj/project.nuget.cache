@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "z/93eFm8upgfewt1Lc9IquBGNBk9hN4CLC3HZcLUGsGyok666f7Ho5xO+asGVfsYGKl0K1FkTGoLUo5ejCVUSA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\saisubodh\\source\\repos\\hackathon\\hackathon\\hackathon.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\saisubodh\\.nuget\\packages\\libgit2sharp\\0.26.2\\libgit2sharp.0.26.2.nupkg.sha512",
+    "C:\\Users\\saisubodh\\.nuget\\packages\\libgit2sharp.nativebinaries\\2.0.306\\libgit2sharp.nativebinaries.2.0.306.nupkg.sha512",
+    "C:\\Users\\saisubodh\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
